@@ -1,0 +1,242 @@
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+section {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.navbar {
+  display: flex; /* to display the objects*/
+  position: relative;
+  justify-content: space-between; /* pushes them as far apart from eachother as possible*/
+  align-items: center;
+  background-color: white;
+  color: white;
+}
+
+.brand-title {
+  font-size: 1.5rem; /* increased font size*/
+  margin: 0.5rem; /*add margin */
+  color: white;
+}
+#logo{
+  height: 40px;
+  color:#00FFFF
+}
+
+.navbar-links {
+  height: 100%;
+}
+
+.navbar-links ul {
+  display: flex; /* to align items in list side by side*/
+  margin: 0; /* removes margin*/
+  padding: 0; /* removes padding*/
+}
+
+.navbar-links li {
+  list-style: none; /* to remove underline and bullet point*/
+}
+
+.navbar-links li a {
+  display: block; /*makes them show up as a box  taking up the whole space*/
+  text-decoration: none; /* removes underline*/
+  color: black;
+  padding: 1rem;
+}
+
+.navbar-links li:hover {
+  /*adds hovering animation*/
+  background-color: gray;
+}
+
+.toggle-button {
+  position: absolute; /*puts it all the way on the right */
+  top: 0.75rem;
+  right: 1rem;
+  display: none; /* to not display by default*/
+  flex-direction: column; /* changes span to vertical*/
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  /* selecting class inside a class*/
+  height: 5px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px; /* to round the corners*/
+}
+
+@media (max-width: 800px) {
+  /*media query runs if condition inside is met. Here is screen is small */
+  .navbar {
+    flex-direction: column; /*makes logo and list on top of eachother */
+    align-items: flex-start; /*pushes items to the left*/
+  }
+
+  .toggle-button {
+    display: flex; /* makes it appear*/
+  }
+
+  .navbar-links {
+    display: none; /* makes links disappear when small*/
+    width: 100%;
+  }
+
+  .navbar-links ul {
+    width: 100%; /* each items taks up 100% of the horizontal space*/
+    flex-direction: column; /* puts list items in vertical */
+  }
+
+  .navbar-links ul li {
+    text-align: center;
+  }
+
+  .navbar-links ul li a {
+    padding: 0.5rem 1rem; /* shortens the padding making the elements appear closer together*/
+  }
+
+  .navbar-links.active {
+    /* for when the mini menu appears */
+    display: flex;
+  }
+}
+
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.horizontal-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.horizontal-list li {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.horizontal-list li img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.project {
+  flex: 0 0 auto;
+  margin-right: 20px;
+  width: 300px;
+}
+
+.project img {
+  width: 100%;
+}
+
+.project h3 {
+  margin-top: 10px;
+}
+
+.project p {
+  margin-top: 5px;
+}
+
+.project-links {
+  text-align: center;
+}
+
+.project-links a {
+  display: inline-block;
+  margin-top: 10px;
+
+  padding: 0 10px 0 10px;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 0px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input,
+textarea {
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 300px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+#notification {
+  margin-top: 20px;
+  color: green;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  section {
+    padding: 20px;
+  }
+
+  .projects-container {
+    overflow-x: scroll;
+  }
+}
